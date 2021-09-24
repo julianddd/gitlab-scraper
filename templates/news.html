@@ -1,0 +1,12 @@
+<!doctype html>
+<title>Julian's Newsk</title>
+{% if titles %}
+  <h1>There are titles</h1>
+  <ul>
+  {% for title in titles %}
+    <li><a href="">{{ title }}</a></li>
+  {% endfor %}
+  </ul>
+{% else %}
+  <h1>No news</h1>
+{% endif %}
