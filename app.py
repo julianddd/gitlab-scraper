@@ -3,8 +3,6 @@ import os
 from flask import Flask, render_template
 
 import targets
-from targets import ft, sun
-
 
 def create_app(test_config=None):
     # create and configure the app
@@ -36,13 +34,6 @@ def create_app(test_config=None):
     def ft():
         titles = targets.ft.makearequest()
 
-        return render_template('news.html', titles=titles)
-
-    @app.route('/sun')
-    def sun ():
-        titles = targets.sun.makearequest()
-
-        return render_template('news.html', titles=titles)
-
+        return render_template('news.html', titles=titles
 
     return app
